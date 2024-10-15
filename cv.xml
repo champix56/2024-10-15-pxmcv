@@ -12,6 +12,7 @@
 			<prenom>Joël</prenom>
 			<datenaiss>1984-08-03</datenaiss>
 			<age>40</age>
+			<port>06.64.27.63.60</port>
 			<langues>
 				<langue niveau="MATERNELLE">Fr</langue>
 				<langue niveau="LU_ECRIT_PARLER">En</langue>
@@ -61,6 +62,8 @@
 			<prenom>Joël</prenom>
 			<datenaiss>1984-08-03</datenaiss>
 			<age>40</age>
+			<tel></tel>
+			<adresse></adresse>
 			<langues>
 				<langue niveau="MATERNELLE">Fr</langue>
 				<langue niveau="LU_ECRIT_PARLER">En</langue>

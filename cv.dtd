@@ -1,15 +1,19 @@
-<!ELEMENT cvs (cv)>
+<!ELEMENT cvs (cv+)>
 <!ATTLIST cvs
 	versionFichier CDATA #FIXED "1.0"
 >
-<!ELEMENT cv (ident,formations,experiences)>
+<!ELEMENT cv (ident, formations,experiences)>
 <!ATTLIST cv
 	id ID #REQUIRED
 >
-<!ELEMENT ident (nom, prenom, prenom?, prenom?, datenaiss, age, langues, permis?)>
+<!ELEMENT ident (nom, prenom, prenom?, prenom?, datenaiss, age,((port|mail)|(tel,adresse)), langues, permis?)>
 <!ELEMENT nom (#PCDATA)>
 <!ELEMENT prenom (#PCDATA)>
 <!ELEMENT datenaiss (#PCDATA)>
+<!ELEMENT port (#PCDATA)>
+<!ELEMENT mail (#PCDATA)>
+<!ELEMENT tel (#PCDATA)>
+<!ELEMENT adresse (#PCDATA)>
 <!ELEMENT age (#PCDATA)>
 <!ELEMENT langues (langue*)>
 <!ELEMENT langue (#PCDATA)>
@@ -21,3 +25,11 @@
 	type (A|B|C|AB|AC|BC) #REQUIRED
 	vehicule (true|false) #REQUIRED
 >
+<!ELEMENT formations (formation+)>
+<!ELEMENT formation (debut,fin?,intitule)>
+<!ELEMENT debut (#PCDATA)>
+<!ELEMENT fin (#PCDATA)>
+<!ELEMENT intitule (#PCDATA)>
+<!ELEMENT experiences (experience)>
+<!ELEMENT experience (debut, fin?, intitule)>
+
