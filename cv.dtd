@@ -30,6 +30,8 @@
 <!ELEMENT debut (#PCDATA)>
 <!ELEMENT fin (#PCDATA)>
 <!ELEMENT intitule (#PCDATA)>
-<!ELEMENT experiences (experience)>
-<!ELEMENT experience (debut, fin?, intitule)>
-
+<!ELEMENT experiences (experience+)>
+<!ELEMENT experience (debut, fin?, intitules)>
+<!ELEMENT intitules (poste, statut )>
+<!ELEMENT poste (#PCDATA)>
+<!ELEMENT statut (#PCDATA)>

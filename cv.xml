@@ -40,21 +40,21 @@
 			<experience>
 				<debut>2006</debut>
 				<fin>2010</fin>
-				<intitule>
+				<intitules>
 					<poste>consultant</poste>
 					<statut>independant</statut>
-				</intitule>
+				</intitules>
 			</experience>
 			<experience>
 				<debut>2008</debut>
-				<intitule>
+				<intitules>
 					<poste>Formateur</poste>
 					<statut>independant</statut>
-				</intitule>
+				</intitules>
 			</experience>
 		</experiences>
 	</cv>
-	<cv id="2">
+	<cv id="C2">
 		<ident>
 			<nom>DESORBAIX</nom>
 			<prenom>Alexandre</prenom>
@@ -91,17 +91,17 @@
 			<experience>
 				<debut>2006</debut>
 				<fin>2010</fin>
-				<intitule>
+				<intitules>
 					<poste>consultant</poste>
 					<statut>independant</statut>
-				</intitule>
+				</intitules>
 			</experience>
 			<experience>
 				<debut>2008</debut>
-				<intitule>
+				<intitules>
 					<poste>Formateur</poste>
 					<statut>independant</statut>
-				</intitule>
+				</intitules>
 			</experience>
 		</experiences>
 	</cv>
