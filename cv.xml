@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE cvs SYSTEM "cv.dtd">
+<!DOCTYPE cvs SYSTEM "cv.dtd" [
+	<!ENTITY euro "&#x20ac;">
+	<!ENTITY FormateurName "DESORBAIX">
+]>
 <cvs>
 	<cv id="1">
 		<ident>
