@@ -6,3 +6,18 @@
 <!ATTLIST cv
 	id ID #REQUIRED
 >
+<!ELEMENT ident (nom, prenom, prenom?, prenom?, datenaiss, age, langues, permis?)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT prenom (#PCDATA)>
+<!ELEMENT datenaiss (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT langues (langue*)>
+<!ELEMENT langue (#PCDATA)>
+<!ATTLIST langue
+	niveau (MATERNELLE|LU_ECRIT_PARLER|PARLER) #REQUIRED
+>
+<!ELEMENT permis EMPTY>
+<!ATTLIST permis
+	type (A|B|C|AB|AC|BC) #REQUIRED
+	vehicule (true|false) #REQUIRED
+>

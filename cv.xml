@@ -4,10 +4,10 @@
 	<!ENTITY FormateurName "DESORBAIX">
 ]>
 <cvs versionFichier="1.0">
-	<cv id="1">
+	<cv id="C1">
 		<ident>
 			<nom>&FormateurName;</nom>
-			<prenom>Al&#x20ac;&euro;xandre</prenom>
+			<prenom>Alexandre</prenom>
 			<prenom>Dominique</prenom>
 			<prenom>Joël</prenom>
 			<datenaiss>1984-08-03</datenaiss>
