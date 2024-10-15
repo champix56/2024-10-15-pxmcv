@@ -1,3 +1,7 @@
+<!ENTITY % etatCivil SYSTEM "etatcivil.dtd">
+%etatCivil;
+<!ENTITY % nomPrenom "nom,prenom,prenom?,prenom">
+
 <!ELEMENT cvs (meilleurCV,aContacter,cv+)>
 <!ATTLIST cvs
 	versionFichier CDATA #FIXED "1.0"
@@ -14,14 +18,8 @@
 <!ATTLIST cv
 	id ID #REQUIRED
 >
-<!ELEMENT ident (nom, prenom, prenom?, prenom?, datenaiss, age,((port|mail)|(tel,adresse)), langues, permis?)>
-<!ELEMENT nom (#PCDATA)>
-<!ELEMENT prenom (#PCDATA)>
-<!ELEMENT datenaiss (#PCDATA)>
-<!ELEMENT port (#PCDATA)>
-<!ELEMENT mail (#PCDATA)>
-<!ELEMENT tel (#PCDATA)>
-<!ELEMENT adresse (#PCDATA)>
+<!ELEMENT ident (%nomPrenom;, datenaiss, age,((port|mail)|(tel,adresse)), langues, permis?)>
+
 <!ELEMENT age (#PCDATA)>
 <!ELEMENT langues (langue*)>
 <!ELEMENT langue (#PCDATA)>

@@ -1,0 +1,7 @@
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT prenom (#PCDATA)>
+<!ELEMENT datenaiss (#PCDATA)>
+<!ELEMENT port (#PCDATA)>
+<!ELEMENT mail (#PCDATA)>
+<!ELEMENT tel (#PCDATA)>
+<!ELEMENT adresse (#PCDATA)>
