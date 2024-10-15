@@ -1,6 +1,14 @@
-<!ELEMENT cvs (cv+)>
+<!ELEMENT cvs (meilleurCV,aContacter,cv+)>
 <!ATTLIST cvs
 	versionFichier CDATA #FIXED "1.0"
+>
+<!ELEMENT meilleurCV EMPTY>
+<!ATTLIST meilleurCV
+	id IDREF #REQUIRED
+>
+<!ELEMENT aContacter EMPTY>
+<!ATTLIST aContacter
+	ids IDREFS #REQUIRED
 >
 <!ELEMENT cv (ident, formations,experiences)>
 <!ATTLIST cv

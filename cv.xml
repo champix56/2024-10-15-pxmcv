@@ -4,6 +4,8 @@
 	<!ENTITY FormateurName "DESORBAIX">
 ]>
 <cvs versionFichier="1.0">
+	<meilleurCV id="C2"/>
+	<aContacter ids="C2 C1"/>
 	<cv id="C1">
 		<ident>
 			<nom>&FormateurName;</nom>
@@ -55,6 +57,57 @@
 		</experiences>
 	</cv>
 	<cv id="C2">
+		<ident>
+			<nom>DESORBAIX</nom>
+			<prenom>Alexandre</prenom>
+			<prenom>Dominique</prenom>
+			<prenom>Joël</prenom>
+			<datenaiss>1984-08-03</datenaiss>
+			<age>40</age>
+			<tel></tel>
+			<adresse></adresse>
+			<langues>
+				<langue niveau="MATERNELLE">Fr</langue>
+				<langue niveau="LU_ECRIT_PARLER">En</langue>
+			</langues>
+			<permis type="AB" vehicule="true"/>
+		</ident>
+		<formations>
+			<formation>
+				<debut>2004</debut>
+				<fin>2006</fin>
+				<intitule>Bts informatique</intitule>
+			</formation>
+			<formation>
+				<debut>2006</debut>
+				<fin>2007</fin>
+				<intitule>Licence pro assistant chef de projet &amp; gestion de projet</intitule>
+			</formation>
+			<formation>
+				<debut>2008</debut>
+				<fin>2010</fin>
+				<intitule>Master chef de projet </intitule>
+			</formation>
+		</formations>
+		<experiences>
+			<experience>
+				<debut>2006</debut>
+				<fin>2010</fin>
+				<intitules>
+					<poste>consultant</poste>
+					<statut>independant</statut>
+				</intitules>
+			</experience>
+			<experience>
+				<debut>2008</debut>
+				<intitules>
+					<poste>Formateur</poste>
+					<statut>independant</statut>
+				</intitules>
+			</experience>
+		</experiences>
+	</cv>
+	<cv id="C3">
 		<ident>
 			<nom>DESORBAIX</nom>
 			<prenom>Alexandre</prenom>
