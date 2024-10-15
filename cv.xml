@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE cvs SYSTEM "cv.dtd" [
-	<!ENTITY euro "&#x20ac;">
-	<!ENTITY FormateurName "DESORBAIX">
-]>
-<cvs versionFichier="1.0">
+<cvs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="cvs.xsd"
+ versionFichier="1.0">
 	<meilleurCV id="C2"/>
 	<aContacter ids="C2 C1"/>
 	<cv id="C1">
 		<ident>
-			<nom>&FormateurName;</nom>
+			<nom>DESORBAIX</nom>
 			<prenom>Alexandre</prenom>
 			<prenom>Dominique</prenom>
 			<prenom>Joël</prenom>
@@ -64,8 +61,8 @@
 			<prenom>Joël</prenom>
 			<datenaiss>1984-08-03</datenaiss>
 			<age>40</age>
-			<tel></tel>
-			<adresse></adresse>
+			<tel/>
+			<adresse/>
 			<langues>
 				<langue niveau="MATERNELLE">Fr</langue>
 				<langue niveau="LU_ECRIT_PARLER">En</langue>
@@ -115,8 +112,8 @@
 			<prenom>Joël</prenom>
 			<datenaiss>1984-08-03</datenaiss>
 			<age>40</age>
-			<tel></tel>
-			<adresse></adresse>
+			<tel/>
+			<adresse/>
 			<langues>
 				<langue niveau="MATERNELLE">Fr</langue>
 				<langue niveau="LU_ECRIT_PARLER">En</langue>
