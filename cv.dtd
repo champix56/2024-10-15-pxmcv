@@ -1,2 +1,8 @@
-<!ENTITY euro "&#x20ac;">
-<!ENTITY FormateurName "DESORBAIX">
+<!ELEMENT cvs (cv)>
+<!ATTLIST cvs
+	versionFichier CDATA #FIXED "1.0"
+>
+<!ELEMENT cv (ident,formations,experiences)>
+<!ATTLIST cv
+	id ID #REQUIRED
+>

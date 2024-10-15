@@ -3,7 +3,7 @@
 	<!ENTITY euro "&#x20ac;">
 	<!ENTITY FormateurName "DESORBAIX">
 ]>
-<cvs>
+<cvs versionFichier="1.0">
 	<cv id="1">
 		<ident>
 			<nom>&FormateurName;</nom>
