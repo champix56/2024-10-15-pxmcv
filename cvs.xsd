@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
-	<xs:element name="ENTER_NAME_OF_ROOT_ELEMENT_HERE">
+	<xs:element name="cvs">
 		<xs:annotation>
-			<xs:documentation>Comment describing your root element</xs:documentation>
+			<xs:documentation>Element pour l'ensemble des cvs</xs:documentation>
 		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="meilleurCV">
+					<xs:complexType>
+						<xs:attribute name="id" type="xs:IDREF"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="aContacter">
+					<xs:complexType>
+						<xs:attribute name="ids" type="xs:IDREFS"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="cv"/>
+			</xs:sequence>
+			<xs:attribute name="versionFichier" type="xs:decimal" fixed="1.0" use="required">
+			</xs:attribute>
+		</xs:complexType>
 	</xs:element>
 </xs:schema>
