@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:include schemaLocation="etatcivil.xsd"/>
-	
 	<xs:attribute name="ids" type="xs:IDREFS"/>
 	<xs:element name="intitule" type="xs:string"/>
 	<xs:element name="debut" type="xs:gYear"/>
@@ -31,7 +30,6 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:element name="formation" type="CT_formation"/>
-	
 	<xs:simpleType name="ST_langName">
 		<xs:annotation>
 			<xs:documentation>Declaration globale obligatoire pour extension de type restreint</xs:documentation>
