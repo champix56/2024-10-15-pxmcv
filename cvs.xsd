@@ -8,6 +8,17 @@
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
+	<xs:simpleType name="ST_telephone_fr">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="((0[1-7]( |.|-)\d)|00 33 [1-7])\d(( |.|-)\d{2}){3}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--<xs:simpleType name="ST_limited_phonenumber">
+		<xs:restriction base="ST_telephone_fr">
+			<xs:enumeration value="02.97.56.31.26"/>
+			<xs:enumeration value="06.64.27.63.60"/>
+		</xs:restriction>
+	</xs:simpleType>-->
 	<xs:element name="cvs">
 		<xs:annotation>
 			<xs:documentation>Element pour l'ensemble des cvs</xs:documentation>
@@ -59,10 +70,10 @@
 											<xs:annotation>
 												<xs:documentation>choix complexe entre 2 balises ou une suite de balises</xs:documentation>
 											</xs:annotation>
-											<xs:element name="port"/>
+											<xs:element name="port" type="ST_telephone_fr"/>
 											<xs:element name="mail"/>
 											<xs:sequence>
-												<xs:element name="tel"/>
+												<xs:element name="tel" type="ST_telephone_fr"/>
 												<xs:element name="adresse"/>
 											</xs:sequence>
 										</xs:choice>
