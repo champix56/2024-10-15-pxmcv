@@ -8,6 +8,8 @@
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
+	<xs:element name="tel" type="ST_telephone_fr"/>	
+	<xs:element name="port" type="ST_telephone_fr"/>	
 	<xs:simpleType name="ST_telephone_fr">
 		<xs:restriction base="xs:string">
 			<xs:pattern value="((0[1-7]( |.|-)\d)|00 33 [1-7])\d(( |.|-)\d{2}){3}"/>
@@ -70,10 +72,10 @@
 											<xs:annotation>
 												<xs:documentation>choix complexe entre 2 balises ou une suite de balises</xs:documentation>
 											</xs:annotation>
-											<xs:element name="port" type="ST_telephone_fr"/>
+											<xs:element ref="port"/>
 											<xs:element name="mail"/>
 											<xs:sequence>
-												<xs:element name="tel" type="ST_telephone_fr"/>
+												<xs:element ref="tel"/>
 												<xs:element name="adresse"/>
 											</xs:sequence>
 										</xs:choice>
