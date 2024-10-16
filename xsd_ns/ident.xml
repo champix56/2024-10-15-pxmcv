@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<personnels 
+	xmlns="urn:entreprise:lists:personnel" 
+	xmlns:ident="urn:entreprise:information:identite" 
+	xmlns:service="urn:entreprise:information:service" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="urn:entreprise:lists:personnel gencv.xsd">
+	<personnel>
+		<ident:identite>
+			<ident:nom>DESORBAIX</ident:nom>
+			<ident:prenom>Alexandre</ident:prenom>
+			<ident:prenom>Dominique</ident:prenom>
+		</ident:identite>
+		<service:designation>Ingenieur architecture informatique</service:designation>
+	</personnel>
+</personnels>

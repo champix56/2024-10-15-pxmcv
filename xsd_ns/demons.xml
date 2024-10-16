@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<personnels xmlns="urn:entreprise:lists:personnel" xmlns:srvc="urn:entreprise:information:service" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:entreprise:lists:personnel gencv.xsd">
+	<personnel>
+		<identite xmlns="urn:entreprise:information:identite">
+			<nom/>
+			<prenom/>
+		</identite>
+		<srvc:designation/>
+	</personnel>
+</personnels>
