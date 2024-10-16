@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:attribute name="ids" type="xs:IDREFS"/>
 	<xs:element name="prenom">
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
@@ -20,7 +21,7 @@
 				</xs:element>
 				<xs:element name="aContacter">
 					<xs:complexType>
-						<xs:attribute name="ids" type="xs:IDREFS"/>
+						<xs:attribute ref="ids" use="required"/>
 					</xs:complexType>
 				</xs:element>
 				<xs:element name="cv" maxOccurs="unbounded">
