@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="civilite.xsd"/>
 	<xs:element name="nom">
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
@@ -19,6 +20,7 @@
 			<xs:documentation>groupe commun pour identité d'individu</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
+			<xs:element ref="civilite" minOccurs="0"/>
 			<xs:element ref="nom"/>
 			<xs:element ref="prenom" maxOccurs="3" minOccurs="2"/>
 		</xs:sequence>
