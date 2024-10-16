@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<cvs versionFichier="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cvs.xsd">
+<cvs versionFichier="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="genxsd.xsd">
 	<meilleurCV id="C2"/>
 	<aContacter ids="C2 C1"/>
 	<cv id="C1">
@@ -38,17 +38,14 @@
 			<experience>
 				<debut>2006</debut>
 				<fin>2010</fin>
-				<intitules>
+				<intitule>
 					<poste>consultant</poste>
 					<statut>independant</statut>
-				</intitules>
+				</intitule>
 			</experience>
 			<experience>
 				<debut>2008</debut>
-				<intitules>
-					<poste>Formateur</poste>
-					<statut>independant</statut>
-				</intitules>
+				<intitule>lklj<poste>fdcs</poste><statut>:;</statut></intitule>
 			</experience>
 		</experiences>
 	</cv>
@@ -89,17 +86,17 @@
 			<experience>
 				<debut>2006</debut>
 				<fin>2010</fin>
-				<intitules>
+				<intitule>
 					<poste>consultant</poste>
 					<statut>independant</statut>
-				</intitules>
+				</intitule>
 			</experience>
 			<experience>
 				<debut>2008</debut>
-				<intitules>
+				<intitule>
 					<poste>Formateur</poste>
 					<statut>independant</statut>
-				</intitules>
+				</intitule>
 			</experience>
 		</experiences>
 	</cv>
@@ -140,17 +137,17 @@
 			<experience>
 				<debut>2006</debut>
 				<fin>2010</fin>
-				<intitules>
+				<intitule>
 					<poste>consultant</poste>
 					<statut>independant</statut>
-				</intitules>
+				</intitule>
 			</experience>
 			<experience>
 				<debut>2008</debut>
-				<intitules>
+				<intitule>
 					<poste>Formateur</poste>
 					<statut>independant</statut>
-				</intitules>
+				</intitule>
 			</experience>
 		</experiences>
 	</cv>
