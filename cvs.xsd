@@ -52,6 +52,9 @@
 											</xs:simpleType>
 										</xs:element>
 										<xs:choice>
+											<xs:annotation>
+												<xs:documentation>choix complexe entre 2 balises ou une suite de balises</xs:documentation>										
+											</xs:annotation>
 											<xs:element name="port"/>
 											<xs:element name="mail"/>
 											<xs:sequence>
