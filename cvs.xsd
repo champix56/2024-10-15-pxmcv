@@ -8,6 +8,27 @@
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
+	<xs:simpleType name="ST_langName">
+	<xs:annotation><xs:documentation>Declaration globale obligatoire pour extension de type restreint</xs:documentation></xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Fr"/>
+			<xs:enumeration value="En"/>
+			<xs:enumeration value="Es"/>
+			<xs:enumeration value="Fn"/>
+			<xs:enumeration value="Lsf"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:attribute name="niveau">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="MATERNELLE"/>
+				<xs:enumeration value="LU"/>
+				<xs:enumeration value="ECRIT"/>
+				<xs:enumeration value="PARLER"/>
+				<xs:enumeration value="LU_ECRIT_PARLER"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
 	<xs:element name="tel" type="ST_telephone_fr"/>	
 	<xs:element name="port" type="ST_telephone_fr"/>	
 	<xs:simpleType name="ST_telephone_fr">
@@ -79,6 +100,21 @@
 												<xs:element name="adresse"/>
 											</xs:sequence>
 										</xs:choice>
+										<xs:element name="langues">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="langue" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="ST_langName">
+																	<xs:attribute ref="niveau" use="required"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
 									</xs:sequence>
 								</xs:complexType>
 							</xs:element>
