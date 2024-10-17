@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Enter your title here</title>
+		<style>
+			@media screen{.facture{margin-bottom:20px;border:1px solid black;}}			
+			body{
+				width:18cm;
+			}			
+			.facture{
+				page-break-before:always;
+				height:27cm;
+			}
+			.emeteur{
+				height:5cm;
+			}
+			.destinataire{
+				margin-left:13cm;
+				height:5cm;
+			}
+			.numfacture{
+				margin-top:1cm;
+				margin-left:25%;
+				width:50%;
+				text-align:center;
+			}
+			table{
+				width:90%;
+				margin-left:5%;
+				margin-top:1cm;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="header">
+			Factures en date du : 
+			<hr/>
+		</div>
+		<div class="facture">
+			<div class="emeteur">emet</div>
+			<div class="destinataire">dest</div>
+			<div class="numfacture">Facture N° <br/>En date du : </div>
+			<table class="lignes" border="1" cellspacing="0" cellpadding="0">
+				<thead>
+					<tr>
+						<th>Ref</th>
+						<th>designation</th>
+						<th>&euro;/unit.</th>
+						<th>quantité</th>
+						<th>sous-total</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td colspan="3"></td>
+						<td>Montant H.T.</td>
+						<th>€</th>
+					</tr>
+					<tr>
+						<td colspan="3"></td>
+						<td>Montant T.V.A.</td>
+						<th>€</th>
+					</tr>
+					<tr>
+						<td colspan="3"></td>
+						<td>Montant T.T.C.</td>
+						<th>€</th>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>
