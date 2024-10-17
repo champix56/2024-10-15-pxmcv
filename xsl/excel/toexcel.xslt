@@ -219,7 +219,7 @@
 						<Cell ss:MergeAcross="1" ss:StyleID="s77">
 							<Data ss:Type="String">Montant total fichier :</Data>
 						</Cell>
-						<Cell ss:MergeAcross="1" ss:StyleID="s78" ss:Formula="=SUM(R[-1]C:R[-1]C)">
+						<Cell ss:MergeAcross="1" ss:StyleID="s78" ss:Formula="=SUM(R[-{count(//facture)}]C:R[-1]C)">
 							<Data ss:Type="Number">
 								<xsl:value-of select="sum(//stotligne)"/>
 							</Data>
