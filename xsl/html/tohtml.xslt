@@ -17,14 +17,30 @@
 		</xsl:if>
 		<xsl:value-of select="/factures/@cpets"/>&nbsp;<xsl:value-of select="/factures/@villeets"/>
 	</xsl:template>
+	<xsl:template match="@numfacture">
+		<div class="numfacture">
+			<!--
+				interdit les if successif pour le meme test
+					<xsl:if test="contains(../@type,'acture')">Facture</xsl:if>
+					<xsl:if test="contains(../@type,'evis')">Devis</xsl:if>
+			-->
+			<xsl:choose>
+				<xsl:when test="contains(../@type,'acture')">Facture</xsl:when>
+				<xsl:otherwise>Devis</xsl:otherwise>
+			</xsl:choose>
+			 N° <xsl:value-of select="."/><br/>
+			En date du : <xsl:value-of select="../@datefacture"/>
+		</div>
+	</xsl:template>
 	<xsl:template match="facture">
 		<div class="facture" id="F{@numfacture}">
+			<xsl:comment>une Facture depuis xml</xsl:comment>
 			<div class="emeteur">
 				<!--<xsl:apply-templates select="/factures/@rsets"/>-->
 				<xsl:call-template name="info-emeteur"/>
 			</div>
 			<div class="destinataire">dest</div>
-			<div class="numfacture">Facture N° <br/>En date du : </div>
+			<xsl:apply-templates select="@numfacture"/>
 			<table class="lignes" border="1" cellspacing="0" cellpadding="0">
 				<thead>
 					<tr>
