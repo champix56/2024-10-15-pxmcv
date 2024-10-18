@@ -49,6 +49,7 @@
 		</style>
 			</head>
 			<body>
+			<xsl:message>Generation des factures en date du : <xsl:value-of select="/factures/@dateeditionXML"/></xsl:message>
 				<div id="header">Factures en date du : <xsl:value-of select="/factures/@dateeditionXML"/><hr/>
 <table>
 						<xsl:call-template name="totaux">

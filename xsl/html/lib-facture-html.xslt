@@ -44,6 +44,7 @@
 		</div>
 	</xsl:template>
 	<xsl:template match="facture">
+	<xsl:message>generation de la facture n° <xsl:value-of select="@numfacture"/></xsl:message>
 		<div class="facture" id="F{@numfacture}">
 			<xsl:comment>une Facture depuis xml</xsl:comment>
 			<div class="emeteur">
