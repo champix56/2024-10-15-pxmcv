@@ -5,6 +5,8 @@
 ]>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:output method="html" encoding="UTF-8" indent="yes"/>
+	<xsl:decimal-format name="euro" grouping-separator=" " decimal-separator=","/>
+	<xsl:decimal-format name="calculatable_number" decimal-separator="."/>
 	<!--<xsl:template match="@rsets">
 		<xsl:value-of select="/factures/@rsets"/><br/>
 		<xsl:value-of select="/factures/@adr1ets"/>
@@ -54,21 +56,9 @@
 				</thead>
 				<tbody>
 					<xsl:apply-templates select=".//ligne"/>
-					<tr>
-						<td colspan="3"/>
-						<td>Montant H.T.</td>
-						<th>€</th>
-					</tr>
-					<tr>
-						<td colspan="3"/>
-						<td>Montant T.V.A.</td>
-						<th>€</th>
-					</tr>
-					<tr>
-						<td colspan="3"/>
-						<td>Montant T.T.C.</td>
-						<th>€</th>
-					</tr>
+					<xsl:call-template name="totaux">
+						<xsl:with-param name="nodes" select="."/>
+					</xsl:call-template>
 				</tbody>
 			</table>
 		</div>
@@ -111,18 +101,61 @@
 		</style>
 			</head>
 			<body>
-				<div id="header">Factures en date du : <xsl:value-of select="/factures/@dateeditionXML"/><hr/></div>
+				<div id="header">Factures en date du : <xsl:value-of select="/factures/@dateeditionXML"/><hr/>
+<table>
+						<xsl:call-template name="totaux">
+							<xsl:with-param name="nodes" select="/factures"/>
+						</xsl:call-template>
+					</table>		
+<hr/>		
+				</div>
 				<xsl:apply-templates select="//facture"/>
 			</body>
 		</html>
 	</xsl:template>
 	<xsl:template match="ligne">
 		<tr class="ligne">
-			<td><xsl:value-of select="ref"/></td>
-			<td><xsl:value-of select="designation"/></td>
-			<td class="center"><xsl:value-of select="format-number(phtByUnit,'0.00€')"/></td>
-			<td class="center"><xsl:value-of select="nbUnit"/></td>
-			<th><xsl:value-of select="format-number(stotligne,'0.00€')"/></th>
+			<td>
+				<xsl:value-of select="ref"/>
+			</td>
+			<td>
+				<xsl:value-of select="designation"/>
+			</td>
+			<td class="center">
+				<xsl:value-of select="format-number(phtByUnit,'0.00€')"/>
+			</td>
+			<td class="center">
+				<xsl:value-of select="nbUnit"/>
+			</td>
+			<th>
+				<xsl:value-of select="format-number(stotligne,'0.00€')"/>
+			</th>
+		</tr>
+	</xsl:template>
+	<xsl:template name="totaux">
+		<xsl:param name="nodes" select="."/>
+		<xsl:variable name="stot" select="sum($nodes//stotligne)"/>
+		<xsl:variable name="tva" select="format-number($stot*0.20,'0.00', 'calculatable_number')"/>
+		<tr>
+			<td colspan="3">&nbsp;</td>
+			<td>Montant H.T.</td>
+			<th>
+				<xsl:value-of select="format-number($stot,'# ##0,00€', 'euro')"/>
+			</th>
+		</tr>
+		<tr>
+			<td colspan="3"/>
+			<td>Montant T.V.A.</td>
+			<th>
+				<xsl:value-of select="format-number($tva,'# ##0,00€', 'euro')"/>
+			</th>
+		</tr>
+		<tr>
+			<td colspan="3"/>
+			<td>Montant T.T.C.</td>
+			<th>
+				<xsl:value-of select="format-number($stot + $tva,'# ##0,00€', 'euro')"/>
+			</th>
 		</tr>
 	</xsl:template>
 </xsl:stylesheet>
