@@ -6,8 +6,19 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:decimal-format name="euro" grouping-separator=" " decimal-separator=","/>
 	<xsl:decimal-format name="calculatable_number" decimal-separator="."/>
+<!--	<xsl:variable name="docClient" select="document('clients.xml')"/>-->
 	<xsl:param name="tva_tx" select="20"/>
 	<xsl:variable name="tva_pcent" select="$tva_tx div 100"/>
+	<xsl:template match="/clients/client">
+		<div class="destinataire">
+			<xsl:value-of select="destinataire"/><br/>
+			<xsl:value-of select="adr1"/><br/>
+			<xsl:if test="adr2 and string-length(adr2)">
+				<xsl:value-of select="adr2"/><br/>
+			</xsl:if>
+			<xsl:value-of select="cp"/>&nbsp;<xsl:value-of select="ville"/><br/>
+		</div>
+	</xsl:template>
 	<xsl:template name="info-emeteur">
 		<xsl:value-of select="/factures/@rsets"/><br/>
 		<xsl:value-of select="/factures/@adr1ets"/><br/>
@@ -39,7 +50,10 @@
 				<!--<xsl:apply-templates select="/factures/@rsets"/>-->
 				<xsl:call-template name="info-emeteur"/>
 			</div>
-			<div class="destinataire">dest</div>
+			<xsl:variable name="idclient" select="@idclient"/>
+			<xsl:apply-templates
+				select="document('clients.xml')/clients/client[@id=$idclient]"
+			/>
 			<xsl:apply-templates select="@numfacture"/>
 			<table class="lignes" border="1" cellspacing="0" cellpadding="0">
 				<thead>
@@ -86,5 +100,4 @@
 			</th>
 		</tr>
 	</xsl:template>
-
 </xsl:stylesheet>
