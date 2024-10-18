@@ -7,6 +7,9 @@
 	<xsl:output method="html" encoding="UTF-8" indent="yes"/>
 	<xsl:decimal-format name="euro" grouping-separator=" " decimal-separator=","/>
 	<xsl:decimal-format name="calculatable_number" decimal-separator="."/>
+	<xsl:param name="tva_tx" select="20"/>
+	<xsl:variable name="tva_pcent" select="$tva_tx div 100"/>
+	
 	<!--<xsl:template match="@rsets">
 		<xsl:value-of select="/factures/@rsets"/><br/>
 		<xsl:value-of select="/factures/@adr1ets"/>
@@ -135,7 +138,7 @@
 	<xsl:template name="totaux">
 		<xsl:param name="nodes" select="."/>
 		<xsl:variable name="stot" select="sum($nodes//stotligne)"/>
-		<xsl:variable name="tva" select="format-number($stot*0.20,'0.00', 'calculatable_number')"/>
+		<xsl:variable name="tva" select="format-number($stot * $tva_pcent,'0.00', 'calculatable_number')"/>
 		<tr>
 			<td colspan="3">&nbsp;</td>
 			<td>Montant H.T.</td>
