@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<photos xmlns:fo="http://www.w3.org/1999/XSL/Format" theme="C:\Users\champix\AppData\Roaming\fond1524806923.png" OnlyComment="false" intercal="true">
+	<titre>Album photo</titre>
+	<couv>
+		<image href="H97C9583_1R_DxOFP.JPG" path="G:\partage\photos\"/>
+	</couv>
+	<pages titre="true">
+		<page>
+			<image href="10589498_10152666826402884_269854391_n.jpg" path="G:\partage\photos\">versailles</image>
+			<image href="10599489_10152664721102884_8998763423280924639_n.jpg" path="G:\partage\photos\">versailles 2</image>
+			<image href="10603059_10152666856762884_1968346443_n.jpg" path="G:\partage\photos\">versailles 3</image>
+			<image href="10616075_10152664721277884_204613508926358332_n.jpg" path="G:\partage\photos\">Locqmariaquer</image>
+		</page>
+		<page>
+			<image href="10637762_10152666826227884_1150744547_n.jpg" path="G:\partage\photos\"/>
+			<image href="10643440_10152666821127884_1257003855_n-688x457.jpg" path="G:\partage\photos\"/>
+		</page>
+	</pages>
+	<signature>desorbaix@free.fr</signature>
+</photos>
