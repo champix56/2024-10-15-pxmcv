@@ -13,7 +13,8 @@
 		<xsl:value-of select="/factures/@rsets"/><br/>
 		<xsl:value-of select="/factures/@adr1ets"/><br/>
 		<xsl:if test="string-length(@adr2ets)>0">
-			<xsl:value-of select="/factures/@adr2ets"/><br/>
+			<xsl:value-of select="/factures/@adr2ets"/>
+			<br/>
 		</xsl:if>
 		<xsl:value-of select="/factures/@cpets"/>&nbsp;<xsl:value-of select="/factures/@villeets"/>
 	</xsl:template>
@@ -28,7 +29,7 @@
 				<xsl:when test="contains(../@type,'acture')">Facture</xsl:when>
 				<xsl:otherwise>Devis</xsl:otherwise>
 			</xsl:choose>
-			 N° <xsl:value-of select="."/><br/>
+			N° <xsl:value-of select="."/><br/>
 			En date du : <xsl:value-of select="../@datefacture"/>
 		</div>
 	</xsl:template>
@@ -52,13 +53,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr class="ligne">
-						<td/>
-						<td/>
-						<td/>
-						<td/>
-						<td/>
-					</tr>
+					<xsl:apply-templates select=".//ligne"/>
 					<tr>
 						<td colspan="3"/>
 						<td>Montant H.T.</td>
@@ -110,6 +105,9 @@
 				margin-left:5%;
 				margin-top:1cm;
 			}
+			.center{
+				text-align:center;
+			}
 		</style>
 			</head>
 			<body>
@@ -117,5 +115,14 @@
 				<xsl:apply-templates select="//facture"/>
 			</body>
 		</html>
+	</xsl:template>
+	<xsl:template match="ligne">
+		<tr class="ligne">
+			<td><xsl:value-of select="ref"/></td>
+			<td><xsl:value-of select="designation"/></td>
+			<td class="center"><xsl:value-of select="format-number(phtByUnit,'0.00€')"/></td>
+			<td class="center"><xsl:value-of select="nbUnit"/></td>
+			<th><xsl:value-of select="format-number(stotligne,'0.00€')"/></th>
+		</tr>
 	</xsl:template>
 </xsl:stylesheet>
